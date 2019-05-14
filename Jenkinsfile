@@ -522,7 +522,7 @@ pipeline {
                             steps {
                                 buildName "${BUILD_NUMBER}-${GIT_COMMIT}-${CHANGE_TARGET}"
                                 buildDescription "${CHANGE_TITLE}\n${CHANGE_AUTHOR}\n"
-                                echo "\n${GIT_COMMITTER_NAME}\n${GIT_COMMITTER_EMAIL}\n${GIT_AUTHOR_EMAIL}"
+                                echo "\\n${GIT_AUTHOR_EMAIL}"
                                 powershell """
                                     \$ErrorActionPreference = "Stop"
                                     npm install --no-optional
