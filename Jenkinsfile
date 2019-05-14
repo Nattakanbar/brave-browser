@@ -521,7 +521,7 @@ pipeline {
                         stage("install") {
                             steps {
                                 buildName "${BUILD_NUMBER}-${GIT_COMMIT}-${CHANGE_TARGET}"
-                                buildDescription "${CHANGE_TITLE}\n${CHANGE_URL}\n${CHANGE_AUTHOR}\n${CHANGE_AUTHOR_DISPLAY_NAME}\n${CHANGE_ID}\n${GIT_COMMITTER_NAME}"
+                                buildDescription "${CHANGE_TITLE}\n${CHANGE_URL}\n${CHANGE_AUTHOR}\n${CHANGE_AUTHOR_DISPLAY_NAME}\n${CHANGE_ID}"
                                 echo "\n${CHANGE_AUTHOR_EMAIL}\n${GIT_COMMITTER_EMAIL}\n${GIT_AUTHOR_EMAIL}"
                                 powershell """
                                     \$ErrorActionPreference = "Stop"
