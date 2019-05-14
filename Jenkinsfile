@@ -520,6 +520,8 @@ pipeline {
                         }
                         stage("install") {
                             steps {
+                                buildName "${BUILD_NUMBER}-${GIT_COMMIT}-${NODE_NAME}"
+                                buildDescription "${CHANGE_TITLE}"                                 
                                 powershell """
                                     \$ErrorActionPreference = "Stop"
                                     npm install --no-optional
