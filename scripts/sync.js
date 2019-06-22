@@ -13,8 +13,6 @@ program
   .option('--run_hooks', 'run gclient hooks')
   .option('--run_sync', 'run gclient sync')
   .option('--target_os <target_os>', 'target OS')
-  .option('--target_arch <target_arch>', 'target architecture')
-  .option('--target_apk_base <target_apk_base>', 'target Android OS apk (classic, modern, mono)')
   .option('--submodule_sync', 'run submodule sync')
   .option('--init', 'initialize all dependencies')
   .option('--all', 'update all projects')
@@ -49,7 +47,7 @@ projectNames.forEach((name) => {
 })
 
 if (updatedVersion || program.init || program.run_sync) {
-  util.gclientSync(program.init)
+  util.gclientSync()
 }
 
 if (updatedVersion || program.init || program.run_hooks) {
